@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<link rel="stylesheet" type="text/css" href="task3.css">
+</head>
+<script type="text/javascript">
+	var num='';
+	var no1_='';
+	var t='';
+	var oprt='';
+	var temp=0;
+	var result=0;
+	function myfunction(no){
+		var n=no;
+		document.getElementById("result").innerHTML=n;
+		/*let num = new Array(); */
+		num+=n;
+		document.getElementById("result").innerHTML=num;
+		console.log(num);
+		for(var i=0;i<=num.length;i++){
+			if(num.charAt(i)=='+'||num.charAt(i)=='-'||num.charAt(i)=='*'||num.charAt(i)=='/'){
+					no1_=num.slice(0,(i));
+					/*console.log(no1_);
+					t=no1_.toString();*/
+					temp=parseInt(no1_);
+					
+					console.log(temp+1);
+					oprt=num.charAt(i);
+					
+					console.log(typeof(oprt));
+
+			}
+		}
+	switch(oprt){
+		case '+':
+			result=result+temp;
+			document.getElementById("result").innerHTML=result;
+			num='';
+			temp=0;
+			oprt='';
+			break;
+
+		case '-':
+			result=result-temp;
+			document.getElementById("result").innerHTML=result;
+			num='';
+			temp=0;
+			oprt='';
+			break;
+		case '*':
+			result=result*temp;
+			document.getElementById("result").innerHTML=result;
+			num='';
+			temp=0;
+			oprt='';
+			break;
+		case '/':
+			result=result/temp;
+			document.getElementById("result").innerHTML=result;
+			num='';
+			temp=0;
+			oprt='';
+			break;
+		default:
+			break;
+			
+	}
+
+		/*var n_=document.getElementById("result").value=n;
+		console.log(n_);
+
+		/*let num = new Array(); 
+		let oprt = new Array();
+		if(typeof n === 'string') {
+			oprt.push(n);
+			console.log(oprt);
+			document.getElementById("result").innerHTML=oprt;
+		}
+		else{
+			num.push(n);
+			document.getElementById("result").innerHTML=num;
+			//var num_=num.toString();
+			console.log(num_);
+		}
+		/*for (var i =0; i <=  n.length ; i++) {
+			if(typeof n[i] === 'string'){
+				var temp=n.slice(0,i);
+			}
+		}*/
+		}		
+</script>
+<body>
+	<div id="body">
+		<div id="result"><input type="value" name=""></div>
+		<div class="calc_">
+			<div class="calc">
+				<button type="button" onclick="myfunction('1')">1</button>
+				<button type="button" onclick="myfunction('2')">2</button>
+				<button type="button" onclick="myfunction('3')">3</button>
+				<button type="button" onclick="myfunction ('+')">+</button>
+			</div>
+			<div class="calc">
+				<button type="button" onclick="myfunction('4')">4</button>
+				<button type="button" onclick="myfunction('5')">5</button>
+				<button type="button" onclick="myfunction('6')">6</button>
+				<button type="button" onclick="myfunction('-')">-</button>
+			</div>
+			<div class="calc">
+				<button type="button" onclick="myfunction('7')">7</button>
+				<button type="button" onclick="myfunction('8')">8</button>
+				<button type="button" onclick="myfunction('9')">9</button>
+				<button type="button" onclick="myfunction('*')">*</button>
+			</div>
+			<div class="calc">
+
+				<button class="btn" type="button" onclick="myfunction('0')">0</button>
+				<button class="btn" type="button" onclick="myfunction('/')">/</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

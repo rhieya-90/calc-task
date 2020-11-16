@@ -1,0 +1,26 @@
+body{
+    margin: 35px 0 0 352px;
+}
+#body{
+width: 186px;
+border-style: inset;
+}
+#result{
+width: 179px;
+border-color: blanchedalmond;
+border-style: inset;
+
+}
+button{
+padding: 11px;
+border-radius: 20px;
+margin-right: 9px;
+background-color: wheat;
+}
+#calc_{
+background-color: beige;
+
+}
+.btn{
+    margin-left: 52px;
+}
